@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    #mensagem {
+      display: block;
+      max-width: 100%;
+      max-height: 100vh;
+      width: auto;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="mensagem" alt="Mensagem">
+
+  <script>
+    const imagens = [
+      "mensagem1.jpg",
+      "mensagem2.jpg",
+      "mensagem3.jpg"
+    ];
+
+    const sorteada = imagens[Math.floor(Math.random() * imagens.length)];
+    document.getElementById("mensagem").src = sorteada;
+  </script>
+</body>
+</html>
