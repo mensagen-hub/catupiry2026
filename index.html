@@ -6,16 +6,13 @@
   <title>Mensagem</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
       width: 100%;
       min-height: 100%;
       background: #ffffff;
-      font-family: Arial, sans-serif;
     }
 
     body {
@@ -23,31 +20,38 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
     }
 
-    #mensagem {
+    a {
       display: block;
-      max-width: 100%;
-      max-height: 100vh;
-      width: auto;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
       height: auto;
+      max-height: 100vh;
+      object-fit: contain;
+      margin: 0 auto;
     }
   </style>
 </head>
 
 <body>
-  <img id="mensagem" alt="Mensagem">
 
-  <script>
-    const imagens = [
-      "mensagem1.jpg",
-      "mensagem2.jpg",
-      "mensagem3.jpg"
-    ];
+  <a
+    href="https://wa.me/5555119962622?text=Agradecemos%20por%20sua%20participa%C3%A7%C3%A3o%20em%20nossa%20a%C3%A7%C3%A3o.%20"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Abrir WhatsApp"
+  >
+    <img
+      src="imagem1.jpg"
+      alt="Mensagem da ação"
+    >
+  </a>
 
-    const sorteada = imagens[Math.floor(Math.random() * imagens.length)];
-    document.getElementById("mensagem").src = sorteada;
-  </script>
 </body>
 </html>
